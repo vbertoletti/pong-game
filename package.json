@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "An SVG Pong game.",
   "license": "ISC",
-  "author": "Mandi Wise <mandi@redacademy.com>",
+  "author": "Vanessa Bertoletti",
   "main": "build/bundle.js",
   "scripts": {
     "start": "webpack-dev-server",

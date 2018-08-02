@@ -8,7 +8,42 @@
 		<div class="game-wrapper">
 			<h1>Pong</h1>
 			<div id="game"></div>
-			<!-- Rough-out your SVG mark-up here to start... -->
+
+
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="256">
+
+			
+
+					<!-- arena -->
+
+						<rect class="arena" fill="#353535" stroke-width="5" width="512" height="256"
+						rx="2%"/>
+
+						<!-- paddles -->
+
+						<rect class="paddle" fill="white" stroke-width="5" width="10" height="60" x="10" y="100"
+						/>
+
+						<rect class="paddle" fill="white" stroke-width="5" width="10" height="60" x="490" y="100"
+						/>
+			
+
+						<!-- middle-line -->
+
+						<line class="middle" x1="256"
+						y1="0" x2="256" y2="256"
+						stroke="white" 
+						stroke="4"
+						stroke-dasharray="7 5"/>
+
+						<!-- ball -->
+
+						<circle class="ball" cx="256" cy="128" r="10" fill="white"/>
+
+			
+		
+			</svg>
+
 		</div>
 		<script type="text/javascript" src="build/bundle.js"></script>
 	</body>
