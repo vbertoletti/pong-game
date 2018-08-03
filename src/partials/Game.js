@@ -43,10 +43,25 @@ export default class Game {
 
 		//make a new ball 
 		this.ball = new Ball(8, this.width, this.height);
+
+		//add event listener to listen for space key and pause the game
+		document.addEventListener("keydown", event => {
+			switch(event.key){
+				case KEYS.spaceBar:
+				this.pause = !this.pause; //setting value to itself but false. 
+				break;
+
+			}
+    });
 		
-	}
+	}//end of constructor
 
 render() {
+
+	//if I trigger pause, return will stop running the code and pause the game.
+	if(this.pause){
+		return;
+	}
 
 this.gameElement.innerHTML = '';
 
