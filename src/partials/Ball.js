@@ -9,6 +9,8 @@ export default class Ball {
     this.direction = 1;
 
     this.reset();
+
+    this.ping = new Audio("public/sounds/pong-01.wav");
   }
 
   //reset ball to the middle after player scores goal 
@@ -53,6 +55,7 @@ export default class Ball {
       (this.y >= topY && this.y <= bottomY)
       ){ 
         this.vx = -this.vx; 
+        this.ping.play();
       }
     } else {
       //player 1 paddle collision
@@ -64,6 +67,7 @@ export default class Ball {
         (this.y >= topY && this.y <= bottomY)
       ){
         this.vx = -this.vx;
+        this.ping.play();
       } 
     }
   }
