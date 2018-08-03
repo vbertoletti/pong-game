@@ -77,7 +77,7 @@ this.board.render(svg);
 this.player1.render(svg);
 this.player2.render(svg);
 //render ball
-this.ball.render(svg);
+this.ball.render(svg, this.player1, this.player2);
 }
 
 }

@@ -40,14 +40,43 @@ export default class Ball {
     }
   }
 
+  paddleCollision(player1, player2) {
+    //if moving toward the right end..
+    if (this.vx > 0) {
+      //detect player2 collision
+      let paddle = player2.coordinates(player2.x, player2.y, player2.width, player2.height);
+      let[leftX, rightX, topY, bottomY] = paddle;
+
+      if(
+      (this.x + this.radius >= leftX) && 
+      (this.x + this.radius <= rightX) &&
+      (this.y >= topY && this.y <= bottomY)
+      ){ 
+        this.vx = -this.vx; 
+      }
+    } else {
+      //player 1 paddle collision
+      let paddle = player1.coordinates(player1.x, player1.y, player1.width, player1.height);
+      let[leftX, rightX, topY, bottomY] = paddle;
+      if (
+        (this.x - this.radius <= rightX) &&
+        (this.x - this.radius >= leftX) &&
+        (this.y >= topY && this.y <= bottomY)
+      ){
+        this.vx = -this.vx;
+      } 
+    }
+  }
+
   //loop runs 60 times a second 
-  render(svg) {
+  render(svg, player1, player2) {
 
     //adding vectors on each frame
     this.x += this.vx;
     this.y += this.vy;
 
     this.wallCollision();
+    this.paddleCollision(player1, player2);
 
     //draw ball 
     let circle = document.createElementNS(SVG_NS, "circle");
