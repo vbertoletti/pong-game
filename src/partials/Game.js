@@ -2,6 +2,7 @@ import { SVG_NS, KEYS  } from '../settings';
 import Board from './Board'; 
 import Paddle from './Paddle';
 import Ball from './Ball';
+import Score from './Score.js';
 
 
 export default class Game {
@@ -41,6 +42,9 @@ export default class Game {
 			KEYS.down
 		);
 
+		this.score1 = new Score(this.width / 2 -50, 30, 30);
+		this.score2 = new Score(this.width / 2 + 25, 30, 30);
+
 		//make a new ball 
 		this.ball = new Ball(8, this.width, this.height);
 
@@ -78,6 +82,9 @@ this.player1.render(svg);
 this.player2.render(svg);
 //render ball
 this.ball.render(svg, this.player1, this.player2);
+this.score1.render(svg, this.player1.score);
+this.score2.render(svg, this.player2.score);
+
 }
 
 }
