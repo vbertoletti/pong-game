@@ -25,12 +25,12 @@ export default class Paddle {
   } // end of constructor 
 
   up() {
-  this.y = Math.max (0, this.y - this.speed);
+  this.y = Math.max (3, this.y - this.speed);
     
   }
 
   down() {
-  this.y = Math.min (200, this.y + this.speed);
+  this.y = Math.min (197, this.y + this.speed);
 
   }
 
