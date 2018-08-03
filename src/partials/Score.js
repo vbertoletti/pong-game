@@ -5,10 +5,19 @@ export default class Score {
     this.x = x;
     this.y = y;
     this.size = size;
+
+
   }
 
-
   render(svg, score) {
+
+    let firstScore = 0;
+    let secondScore = 0;
+
+    if(firstScore || secondScore == 10){
+      
+    }
+
     let text = document.createElementNS(SVG_NS, 'text');
     text.setAttributeNS(null,"x", this.x);
     text.setAttributeNS(null,"y", this.y);

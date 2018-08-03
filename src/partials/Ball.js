@@ -26,7 +26,6 @@ export default class Ball {
     while(this.vy === 0){
       this.vy = this.vy = Math.floor(Math.random() * 10 - 5);
     }
-    //
     this.vx = this.direction * (6 - Math.abs(this.vy));
   }
 
