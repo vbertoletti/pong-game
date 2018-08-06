@@ -73,6 +73,7 @@ html {
 body {
   align-items: center;
   display: flex;
+  flex-direction: column;
   font-family: 'Silkscreen Web', monotype;
   color: #22264b;
   height: 100vh;
@@ -88,6 +89,19 @@ h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem; 
   text-align: center;
+}
+
+#start {
+  width: 80px;
+  height: 30px;
+  font-size: 1rem;
+  border: 5px solid #22264b;
+  border-radius: 10px;
+  font-family: 'Silkscreen Web', monotype;
+  background-color: #b0aac2;
+  color:#22264b;
+  cursor: pointer;
+ 
 }
 
 

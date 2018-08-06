@@ -48,8 +48,8 @@ export default class Game {
     this.win = new Win(this.width / 2 - 100, 200, 40);
 
     //make a new ball
-		this.ball = new Ball(8, this.width, this.height);
-		this.ballSecond = new Ball(10, this.width,this.height);
+    this.ball = new Ball(8, this.width, this.height);
+    this.ballSecond = new Ball(10, this.width, this.height);
 
     //add event listener to listen for space key and pause the game
     document.addEventListener("keydown", event => {
@@ -75,11 +75,10 @@ export default class Game {
     svg.setAttributeNS(null, "viewBox", `0 0 ${this.width} ${this.height}`);
     this.gameElement.appendChild(svg);
 
-    
     this.board.render(svg);
     this.player1.render(svg);
     this.player2.render(svg);
-		this.ball.render(svg, this.player1, this.player2);
+    this.ball.render(svg, this.player1, this.player2);
     this.score1.render(svg, this.player1.score);
     this.score2.render(svg, this.player2.score);
 
@@ -87,14 +86,11 @@ export default class Game {
     if (this.player1.score == 3 || this.player2.score == 3) {
       return this.ballSecond.render(svg, this.player1, this.player2);
     }
-		
-		//if statement to declare a winner
+
+    //if statement to declare a winner
     if (this.player1.score == 10 || this.player2.score == 10) {
       this.win.render(svg);
-			this.pause = true;
-
+      this.pause = true;
     }
-
-		
   }
 }
