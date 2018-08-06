@@ -74,16 +74,22 @@ body {
   align-items: center;
   display: flex;
   font-family: 'Silkscreen Web', monotype;
+  color: #22264b;
   height: 100vh;
   justify-content: center;
   width: 100%;
+  background-image: url("https://cdn.dribbble.com/users/77111/screenshots/2603500/attachments/519182/desktop_wallpaper_by_maria_shanina.png");
+  background-size: cover;
+
+  
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem; 
   text-align: center;
 }
+
 
 
 
