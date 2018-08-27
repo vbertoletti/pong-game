@@ -4,13 +4,13 @@ import Game from './partials/Game'
 // create a game instance
 
 document.getElementById("start").onclick = function(event) { 
-
+    event.preventDefault();
 const game = new Game('game', 512, 256);
 
-(function gameLoop() {
-    game.render();
-    requestAnimationFrame(gameLoop);
-})();
+    (function gameLoop() {
+        game.render();
+        requestAnimationFrame(gameLoop);
+    })();
 
 }
 

@@ -62,12 +62,14 @@ export default class Game {
   } //end of constructor
 
   render() {
-    //if I trigger pause, return will stop running the code and pause the game.
+
     if (this.pause) {
       return;
     }
-
+    
     this.gameElement.innerHTML = "";
+    //if I trigger pause, return will stop running the code and pause the game.
+   
 
     let svg = document.createElementNS(SVG_NS, "svg");
     svg.setAttributeNS(null, "width", this.width);
@@ -78,10 +80,12 @@ export default class Game {
     this.board.render(svg);
     this.player1.render(svg);
     this.player2.render(svg);
-    this.ball.render(svg, this.player1, this.player2);
+
     this.score1.render(svg, this.player1.score);
     this.score2.render(svg, this.player2.score);
 
+    this.ball.render(svg, this.player1, this.player2);
+    
     //if statement to add a second ball once score is at 3
     if (this.player1.score == 3 || this.player2.score == 3) {
       return this.ballSecond.render(svg, this.player1, this.player2);

@@ -14,3 +14,7 @@ ehthumbs.db
 # npm
 node_modules
 npm-debug.log
+
+# Ignore packages #
+# =============== #
+package-lock.json

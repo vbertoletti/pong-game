@@ -26,5 +26,16 @@ A classic arcade game, using mostly SVGs, JavaScript (ES.next syntax) and a litt
 
 - Player that sums 10 points first is declared the winner and game stops. 
 
+## Setup
 
- 
+**Install dependencies:**
+
+`> npm i`
+
+**Run locally with Webpack Dev Server:**
+
+`> npm start`
+
+**Build for production:**
+
+`> npm run build`
