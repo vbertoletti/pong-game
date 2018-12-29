@@ -83,7 +83,6 @@ export default class Ball {
   goal(player) {
     player.score++;
     this.reset();
-    console.log("score: ", player.score);
   }
 
   //loop runs 60 times a second
